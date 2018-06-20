@@ -7,11 +7,23 @@ import {Players} from './../imports/api/players'
 
 const renderPlayers = (players) => {
       return players.map((player) => {
-        return <p id={player._ID}>{player.name}: {player.score}</p>;
+        return (<p key={player._id}>
+            {player.name}: {player.score} points.
+
+            <button onClick={() => {
+                  Players.update(player._id, { $inc: {score: 1}
+            })}}>+1</button>
+
+            <button onClick={() => {
+                  Players.update(player._id, { $inc: {score: -1}
+            })}}>-1</button>
+
+            <button onClick={()=> Players.remove(player._id)}>X</button>
+      </p>);
       });
     };
 
-    const handleSubmit= (e)=>{
+    const handleSubmit= (e) => {
       let playerName = e.target.playerName.value
       e.preventDefault()
       if (playerName){
