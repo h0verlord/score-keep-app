@@ -13,7 +13,7 @@ export default class PlayerList extends React.Component{
                   )
             } else{
                   return this.props.players.map((player) => {
-                        return <Player key={player._id} id={player._id} score={player.score} name={player.name}/>
+                        return <Player key={player._id} id={player._id} player={player}/>
                   })
             }
       }
