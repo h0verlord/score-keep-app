@@ -6,7 +6,9 @@ export default class PlayerList extends React.Component{
       renderPlayers(){
             if(this.props.players.length === 0){
                   return (
-                        <p>Add your first player to get started</p>
+                        <div className='item item__message'>
+                              <p>Add your first player to get started</p>
+                        </div>
                   )
             } else{
                   return this.props.players.map((player) => {
@@ -16,7 +18,7 @@ export default class PlayerList extends React.Component{
       }
       render(){
             return (
-                  <div>
+                  <div className='player-list'>
                         {this.renderPlayers()}
                   </div>
             )
