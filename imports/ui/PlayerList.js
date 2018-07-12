@@ -1,6 +1,7 @@
 import React from 'react'
 import Player from './Player'
 import PropTypes from 'prop-types'
+import FlipMove from 'react-flip-move'
 
 export default class PlayerList extends React.Component{
       renderPlayers(){
@@ -19,7 +20,9 @@ export default class PlayerList extends React.Component{
       render(){
             return (
                   <div className='player-list'>
-                        {this.renderPlayers()}
+                        <FlipMove>
+                              {this.renderPlayers()}
+                        </FlipMove>
                   </div>
             )
       }
