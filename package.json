@@ -12,5 +12,19 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-flip-move": "^3.0.2"
-  }
+  },
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h0verlord/score-keep-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h0verlord/score-keep-app/issues"
+  },
+  "homepage": "https://github.com/h0verlord/score-keep-app#readme"
 }
